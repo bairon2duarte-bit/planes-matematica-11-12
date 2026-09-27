@@ -1,0 +1,978 @@
+/* =========================================================
+   PLAN DE CLASE — COLEGIO MONTANO
+   Estilos base para recursos HTML de Matemática
+   ========================================================= */
+
+/* ---------- Configuración general ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fa;
+    color: #243447;
+    line-height: 1.6;
+}
+
+/* ---------- Contenedor principal ---------- */
+
+main {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+/* ---------- Encabezado ---------- */
+
+header {
+    background: linear-gradient(135deg, #244b5a, #1f3c88);
+    color: white;
+    padding: 28px 5%;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+header p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* ---------- Secciones ---------- */
+
+section {
+    background: white;
+    margin: 28px 0;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+/* ---------- Pie de página ---------- */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #244b5a;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------- Diseño responsive ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 24px 4%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    main {
+        width: 94%;
+    }
+}
+
+/* ---------- Impresión ---------- */
+
+
+/* =========================================================
+   ENCABEZADO DEL PLAN
+   ========================================================= */
+
+.encabezado-plan {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: linear-gradient(135deg, #244b5a, #1f3c88);
+    color: white;
+    box-shadow: none;
+}
+
+.encabezado-contenido {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 28px 0;
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 22px;
+    align-items: center;
+}
+
+.icono-matematico {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.informacion-principal {
+    min-width: 0;
+}
+
+.institucion {
+    margin: 0 0 5px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.informacion-principal h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.15;
+}
+
+.datos-plan {
+    margin: 3px 0;
+    font-size: 0.95rem;
+}
+
+.informacion-docente {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.informacion-docente p {
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   PROPÓSITO
+   ========================================================= */
+
+.proposito {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #f0d98c;
+    background: #fffdf5;
+    box-shadow: none;
+}
+
+.contenedor {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.proposito .contenedor {
+    padding: 18px 0;
+}
+
+.proposito p {
+    margin: 0;
+}
+
+.proposito .etiqueta {
+    margin-bottom: 5px;
+    color: #8a6500;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   AJUSTE PARA PANTALLAS PEQUEÑAS
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .encabezado-contenido {
+        grid-template-columns: 70px 1fr;
+        gap: 15px;
+    }
+
+    .icono-matematico {
+        width: 65px;
+        height: 65px;
+        font-size: 2.3rem;
+    }
+
+    .informacion-docente {
+        grid-column: 1 / -1;
+        text-align: right;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 12px;
+    }
+}
+.informacion-principal .datos-plan {
+    text-align: left;
+}
+/* =========================================================
+   NAVEGACIÓN DE LOS MOMENTOS
+   ========================================================= */
+
+.navegacion-momentos {
+    width: min(1100px, 92%);
+    margin: 20px auto;
+    display: flex;
+    gap: 6px;
+    background: white;
+    padding: 6px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navegacion-momentos button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #244b5a;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navegacion-momentos button:hover {
+    background: #eef3f7;
+}
+
+.navegacion-momentos .tab-activo {
+    background: #244b5a;
+    color: white;
+}
+
+
+/* ---------- Adaptación para celulares ---------- */
+
+@media (max-width: 700px) {
+
+    .navegacion-momentos {
+        overflow-x: auto;
+    }
+
+    .navegacion-momentos button {
+        min-width: 130px;
+        flex: 0 0 auto;
+    }
+}
+/* =========================================================
+   MOMENTOS DE LA CLASE
+   ========================================================= */
+
+.momento {
+    width: min(1100px, 92%);
+    margin: 25px auto;
+    padding: 28px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- Encabezado del momento ---------- */
+
+.encabezado-momento {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.tipo-momento {
+    margin: 0 0 5px;
+    color: #244b5a;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.encabezado-momento h2 {
+    margin: 0;
+    color: #243447;
+    font-size: 1.5rem;
+}
+
+.duracion {
+    margin: 5px 0 0;
+    color: #687887;
+    font-size: 0.85rem;
+}
+
+
+/* ---------- Bloques de actividad ---------- */
+
+.actividad,
+.reto,
+.preguntas {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f7f9fb;
+}
+
+.actividad h3,
+.reto h3,
+.preguntas h3 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+.actividad p,
+.reto p,
+.preguntas li {
+    font-size: 0.95rem;
+}
+
+
+/* ---------- Reto ---------- */
+
+.reto {
+    background: #fff9e8;
+    border-left: 5px solid #d6a928;
+}
+
+.reto h3 {
+    color: #8a6500;
+}
+
+
+/* ---------- Hábito 2 ---------- */
+
+.habito {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 18px;
+    background: #eef5f8;
+    border-left: 5px solid #244b5a;
+    border-radius: 10px;
+}
+
+.habito-numero {
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #244b5a;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.habito p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Adaptación para celulares ---------- */
+
+@media (max-width: 700px) {
+
+    .momento {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .encabezado-momento h2 {
+        font-size: 1.3rem;
+    }
+
+    .habito {
+        flex-direction: column;
+    }
+}
+/* =========================================================
+   DIAGRAMA DEL TEOREMA DE THALES
+   ========================================================= */
+
+.diagrama-thales {
+    margin: 25px auto;
+    padding: 15px;
+    max-width: 600px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+}
+
+.diagrama-thales svg {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.diagrama-thales text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    fill: #243447;
+}
+
+.leyenda-diagrama {
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #244b5a;
+}
+/* =========================================================
+   DATOS DEL RETO
+   ========================================================= */
+
+.datos-reto {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.dato {
+    min-width: 110px;
+    padding: 12px 18px;
+    background: white;
+    border: 1px solid #e4d59e;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dato span {
+    display: block;
+    color: #8a6500;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.dato strong {
+    display: block;
+    margin-top: 3px;
+    color: #243447;
+    font-size: 1.1rem;
+}
+/* =========================================================
+   PISTAS INTERACTIVAS
+   ========================================================= */
+
+.boton-pista {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #244b5a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-pista:hover {
+    background: #1f3c88;
+}
+
+.pista {
+    margin-top: 12px;
+    padding: 14px;
+    background: #eef5f8;
+    border-left: 4px solid #244b5a;
+    border-radius: 8px;
+}
+
+.oculto {
+    display: none;
+}
+/* =========================================================
+   MOMENTO 2 — EXPOSICIÓN
+   ========================================================= */
+
+.concepto {
+    margin-top: 20px;
+    padding: 20px;
+    background: #eef5f8;
+    border-left: 5px solid #244b5a;
+    border-radius: 10px;
+}
+
+.concepto h3 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+.formula {
+    margin: 15px auto;
+    padding: 12px 18px;
+    width: fit-content;
+    min-width: 180px;
+    background: white;
+    border: 1px solid #dce5ea;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #243447;
+}
+
+.ejemplo {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7f9fb;
+    border-radius: 10px;
+}
+
+
+.ejemplo h3 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+.procedimiento {
+    margin-top: 20px;
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e1e8ed;
+}
+
+.resultado {
+    background: #eef5f8;
+    border: 2px solid #244b5a;
+    font-size: 1.3rem;
+}
+
+.verificacion {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f1f7f2;
+    border-left: 5px solid #4d7c5a;
+    border-radius: 10px;
+}
+
+.verificacion h3 {
+    margin-top: 0;
+    color: #386044;
+}
+/* =========================================================
+   VISUALIZACIÓN DE LOS MOMENTOS
+   ========================================================= */
+
+.momento {
+    display: none;
+}
+
+.momento.momento-visible {
+    display: block;
+}
+
+/* =========================================================
+   EJERCICIOS DEL MOMENTO 3
+   ========================================================= */
+
+/* =========================================================
+   TARJETAS DE EJERCICIOS — MOMENTO 3
+   ========================================================= */
+
+.ejercicio {
+    margin-top: 30px;
+    padding: 22px;
+    background: linear-gradient(135deg, #eef7ff, #ffffff);
+    border: 2px solid #b9d9f2;
+    border-left: 6px solid #2f80b7;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(47, 128, 183, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ejercicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(47, 128, 183, 0.20);
+}
+
+.numero-ejercicio {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 13px;
+    border-radius: 20px;
+    background: #2f80b7;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+
+.ejercicio h3 {
+    margin: 5px 0 15px;
+    color: #1f5f8b;
+}
+
+.datos-ejercicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.datos-ejercicio span {
+    padding: 9px 14px;
+    background: white;
+    border: 1px solid #c9e1f2;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #243447;
+}
+
+
+/* =========================================================
+   TARJETAS DE DESAFÍOS — MOMENTO 4
+   ========================================================= */
+
+.desafio {
+    margin-top: 20px;
+    padding: 22px;
+    background: linear-gradient(135deg, #fff8df, #ffffff);
+    border: 2px solid #f1d58a;
+    border-left: 6px solid #e0a72f;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(224, 167, 47, 0.14);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.desafio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(224, 167, 47, 0.22);
+}
+
+.desafio h3 {
+    margin: 0 0 15px;
+    color: #9a6b00;
+}
+
+.desafio p {
+    margin-bottom: 12px;
+}
+
+.desafio .datos-ejercicio {
+    margin: 15px 0;
+}
+
+
+/* Desafío de creación */
+
+.desafio-creacion {
+    background: linear-gradient(135deg, #fff0d9, #ffffff);
+    border-left-color: #e67e22;
+}
+
+.desafio-creacion h3 {
+    color: #b45309;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .ejercicio,
+    .desafio {
+        padding: 18px;
+    }
+
+    .datos-ejercicio {
+        flex-direction: column;
+    }
+
+    .datos-ejercicio span {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   TARJETAS — DESAFÍOS DEL MOMENTO 4
+   ========================================================= */
+
+.desafio {
+    margin-top: 20px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #dfe7ec;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.desafio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.09);
+}
+
+.desafio h3 {
+    margin: 0 0 15px;
+    color: #244b5a;
+}
+
+.desafio p {
+    margin-bottom: 12px;
+}
+
+.desafio strong {
+    color: #243447;
+}
+/* =========================================================
+   FONDOS INDIVIDUALES DE LOS DESAFÍOS
+   ========================================================= */
+
+.desafio-1 {
+    background: linear-gradient(135deg, #fff8df, #ffffff);
+}
+
+.desafio-2 {
+    background: linear-gradient(135deg, #fff0e1, #ffffff);
+}
+
+.desafio-3 {
+    background: linear-gradient(135deg, #f4edff, #ffffff);
+}
+
+.desafio-4 {
+    background: linear-gradient(135deg, #eafaf2, #ffffff);
+}
+
+/* Datos numéricos dentro de los desafíos */
+
+.desafio .datos-ejercicio {
+    margin: 15px 0;
+}
+
+
+/* Desafío de creación de problemas */
+
+.desafio-creacion {
+    background: #f7f9fb;
+    border-left: 5px solid #244b5a;
+}
+
+
+/* Producto final del equipo */
+
+.producto-equipo {
+    margin-top: 25px;
+    padding: 20px;
+    background: #eef5f8;
+    border-left: 5px solid #244b5a;
+    border-radius: 10px;
+}
+
+.producto-equipo h3 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 700px) {
+
+    .desafio {
+        padding: 18px;
+    }
+
+}
+
+/* =========================================================
+   FONDOS DIFERENTES — EJERCICIOS MOMENTO 3
+   ========================================================= */
+
+.ejercicio-1 {
+    background: linear-gradient(135deg, #eaf4ff, #ffffff);
+    margin-bottom: 35px;
+}
+
+.ejercicio-2 {
+    background: linear-gradient(135deg, #eafaf2, #ffffff);
+    margin-bottom: 35px;
+}
+
+.ejercicio-3 {
+    background: linear-gradient(135deg, #fff7e6, #ffffff);
+}
+   
+/* =========================================================
+   SEPARACIÓN ENTRE EJERCICIOS — MOMENTO 3
+   ========================================================= */
+
+.ejercicio + .ejercicio {
+    margin-top: 35px;
+}
+
+/* =========================================================
+   TICKET DE SALIDA — MOMENTO 5
+   ========================================================= */
+
+.ticket-salida {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #dce5ea;
+}
+
+.ticket-salida h3 {
+    margin-top: 0;
+    color: #244b5a;
+}
+
+.pregunta-salida {
+    margin-top: 18px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #dfe7ec;
+    border-left: 5px solid #2f80b7;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+}
+
+.pregunta-salida strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    background: #2f80b7;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.pregunta-salida p {
+    margin: 8px 0;
+}
+
+.frase-completar {
+    padding: 12px;
+    background: #f1f7fb;
+    border-radius: 8px;
+}
+
+/* =========================================================
+   FONDOS DEL TICKET DE SALIDA
+   ========================================================= */
+
+.pregunta-salida:nth-of-type(2) {
+    background: linear-gradient(135deg, #eaf4ff, #ffffff);
+}
+
+.pregunta-salida:nth-of-type(3) {
+    background: linear-gradient(135deg, #eafaf2, #ffffff);
+}
+
+.pregunta-salida:nth-of-type(4) {
+    background: linear-gradient(135deg, #fff7e6, #ffffff);
+}
+
+/* =========================================================
+   CONEXIÓN CON EL PLAN 12
+   ========================================================= */
+
+.proyeccion {
+    margin-top: 25px;
+    padding: 22px;
+    background: linear-gradient(135deg, #e8f4ff, #ffffff);
+    border: 2px solid #b9d9f2;
+    border-left: 6px solid #2f80b7;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(47, 128, 183, 0.12);
+}
+
+.proyeccion h3 {
+    margin-top: 0;
+    color: #1f5f8b;
+}
+
+.proyeccion p {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   EVIDENCIA DE APRENDIZAJE — MOMENTO 5
+   ========================================================= */
+
+.evaluacion {
+    margin-top: 25px;
+    padding: 22px;
+    background: linear-gradient(135deg, #f4edff, #ffffff);
+    border: 2px solid #d6c5f0;
+    border-left: 6px solid #7956a8;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(121, 86, 168, 0.12);
+}
+
+.evaluacion h3 {
+    margin-top: 0;
+    color: #68478f;
+}
+
+.evaluacion p {
+    margin-bottom: 0;
+}
+
+.icono-matematico img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.etiqueta-tema {
+    display: inline;
+    text-align: left;
+    margin: 8px 0 2px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffffff;
+    
+     
+    
+}
+
+.titulo-tema {
+  
+    margin: 8px 0 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffffff;
+   
+}
+
+.codigo-pdc {
+    margin: 0 0 5px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    color: #FFD700;
+}
+

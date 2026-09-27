@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan de Clase 11 — Teorema de Thales aplicado a triángulos</title>
+
+    <link rel="stylesheet" href="../css/pdc.css">
+
+    <link rel="stylesheet" href="../css/impresion.css" media="print">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ENCABEZADO DEL PLAN
+         ===================================================== -->
+
+    <header class="encabezado-plan">
+
+        <div class="encabezado-contenido">
+
+            <div class="icono-matematico">
+    <img src="../imagenes/logo_colegio.png"
+         alt="Logo del Colegio Montano">
+</div>
+
+            <div class="informacion-principal">
+
+               <p class="institucion">
+    Colegio Montano
+</p>
+
+<div class="tema-linea">
+    <span class="etiqueta-tema">TEMA:</span>
+    <span class="titulo-tema">
+        Teorema de Thales aplicado a triángulos
+    </span>
+</div>
+
+                <p class="datos-plan">
+                    Tercero Básico · Matemática · Unidad IV – Geometría
+                </p>
+
+                <p class="datos-plan">
+                    Sesión 11 · Semana del 28 de septiembre al 2 de octubre
+                </p>
+
+            </div>
+
+            <div class="informacion-docente">
+                <p class="codigo-pdc">
+                     PDC-11
+                </p>
+                <p>
+                    <strong>Duración</strong><br>
+                    70 minutos
+                </p>
+
+                <p>
+                    <strong>Docente</strong><br>
+                    PEM Bairon Efraín Duarte González
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         PROPÓSITO DE APRENDIZAJE
+         ===================================================== -->
+
+    <section class="proposito">
+
+        <div class="contenedor">
+
+            <p class="etiqueta">
+                PROPÓSITO DE APRENDIZAJE
+            </p>
+
+            <p>
+                Aplicar el Teorema de Thales en triángulos para establecer
+                proporciones entre segmentos correspondientes y determinar
+                longitudes desconocidas, utilizando representaciones
+                geométricas, procedimientos algebraicos y argumentos que
+                permitan validar los resultados.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTENIDO TEMPORAL
+         ===================================================== -->
+
+    
+<main>
+
+    <nav class="navegacion-momentos" aria-label="Momentos de la clase">
+
+        <button class="tab-activo" data-momento="momento1">
+            1. Motivación
+        </button>
+
+        <button data-momento="momento2">
+            2. Exposición
+        </button>
+
+        <button data-momento="momento3">
+            3. Individual
+        </button>
+
+        <button data-momento="momento4">
+            4. Grupal
+        </button>
+
+        <button data-momento="momento5">
+            5. Cierre
+        </button>
+
+    </nav>
+<!-- Navegación exclusiva para impresión -->
+<div class="navegacion-impresion" aria-hidden="true">
+
+    <span>1. Motivación</span>
+    <span>2. Exposición</span>
+    <span>3. Individual</span>
+    <span>4. Grupal</span>
+    <span>5. Cierre</span>
+
+</div>
+
+    <section id="momento1" class="momento">
+       
+
+    <div class="encabezado-momento">
+
+        
+
+        <div>
+            <p class="tipo-momento">MOMENTO 1 · MOTIVACIÓN INICIAL</p>
+
+            <h2>
+                El triángulo que esconde una proporción
+            </h2>
+
+            <p class="duracion">
+                10 minutos
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="actividad">
+
+        <h3>Situación inicial</h3>
+
+        <p>
+            Observa un triángulo ABC en el que el segmento
+            <strong>DE es paralelo a BC</strong>.
+        </p>
+
+        <p>
+            La situación plantea una pregunta:
+            <strong>¿qué relación existe entre los segmentos que se forman
+            dentro del triángulo?</strong>
+        </p>
+
+    </div>
+<div class="diagrama-thales">
+
+    <svg viewBox="0 0 500 300"
+         role="img"
+         aria-label="Triángulo ABC con segmento DE paralelo a BC">
+
+        <!-- Triángulo principal -->
+        <polygon
+            points="250,30 80,260 420,260"
+            fill="none"
+            stroke="#244b5a"
+            stroke-width="3">
+        </polygon>
+
+        <!-- Segmento DE paralelo a BC -->
+        <line
+            x1="190"
+            y1="110"
+            x2="310"
+            y2="110"
+            stroke="#d6a928"
+            stroke-width="4">
+        </line>
+
+        <!-- Puntos -->
+        <circle cx="250" cy="30" r="5" fill="#244b5a"></circle>
+        <circle cx="80" cy="260" r="5" fill="#244b5a"></circle>
+        <circle cx="420" cy="260" r="5" fill="#244b5a"></circle>
+        <circle cx="190" cy="110" r="5" fill="#d6a928"></circle>
+        <circle cx="310" cy="110" r="5" fill="#d6a928"></circle>
+
+        <!-- Etiquetas -->
+        <text x="250" y="20" text-anchor="middle">A</text>
+        <text x="65" y="280">B</text>
+        <text x="425" y="280">C</text>
+        <text x="175" y="105">D</text>
+        <text x="320" y="105">E</text>
+
+    </svg>
+    <p class="leyenda-diagrama">
+    DE ∥ BC
+    </p>
+   
+
+</div>
+
+    <div class="reto">
+
+        <h3>🚀 Reto</h3>
+
+        <p>
+            En el triángulo se conocen los siguientes datos:
+        </p>
+
+        <div class="datos-reto">
+
+    <div class="dato">
+        <span>AB</span>
+        <strong>12 cm</strong>
+    </div>
+
+    <div class="dato">
+        <span>AC</span>
+        <strong>15 cm</strong>
+    </div>
+
+    <div class="dato">
+        <span>AD</span>
+        <strong>8 cm</strong>
+    </div>
+
+</div>
+
+        <p>
+            <strong>
+                ¿Es posible determinar la longitud de AE sin medirla
+                directamente?
+            </strong>
+        </p>
+
+    </div>
+
+
+    <div class="preguntas">
+
+        <h3>Preguntas para pensar</h3>
+
+        <ol>
+            <li>¿Qué información nos proporciona que DE sea paralela a BC?</li>
+
+            <li>
+                ¿Qué segmentos podrían estar relacionados
+                proporcionalmente?
+            </li>
+
+            <li>
+                ¿Podemos encontrar AE utilizando únicamente
+                los datos conocidos?
+            </li>
+        </ol>
+        <button class="boton-pista" type="button" data-pista="pista1">
+    💡 Mostrar pista
+</button>
+
+<p id="pista1" class="pista oculto">
+    Observa qué sucede con los segmentos cuando una recta
+    es paralela a uno de los lados del triángulo.
+    Piensa en pares de segmentos que ocupan posiciones
+    correspondientes.
+</p>
+
+    </div>
+
+
+    <div class="habito">
+
+        <span class="habito-numero">Hábito 2</span>
+
+        <div>
+            <strong>Comenzar con un fin en la mente</strong>
+
+            <p>
+                Antes de realizar operaciones, identifica qué longitud
+                necesitas encontrar, qué datos conoces y qué relación
+                geométrica puede ayudarte a determinarla.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="momento2" class="momento">
+
+    <div class="encabezado-momento">
+
+        <div>
+            <p class="tipo-momento">MOMENTO 2 · EXPOSICIÓN MAGISTRAL</p>
+
+            <h2>
+                Descubrimos la proporción de Thales
+            </h2>
+
+            <p class="duracion">
+                15 minutos
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="actividad">
+
+        <h3>Recordamos lo aprendido</h3>
+
+        <p>
+            Partimos de la situación anterior: en el triángulo ABC,
+            el segmento <strong>DE es paralelo a BC</strong>.
+        </p>
+
+        <p>
+            Esta condición genera una relación de proporcionalidad
+            entre los segmentos correspondientes.
+        </p>
+
+    </div>
+
+
+    <div class="concepto">
+
+        <h3>Teorema de Thales en un triángulo</h3>
+
+        <p>
+            Si una recta paralela a uno de los lados de un triángulo
+            corta los otros dos lados, entonces los segmentos
+            correspondientes son proporcionales.
+        </p>
+
+        <div class="formula">
+             \[
+        \frac{AD}{DB} = \frac{AE}{EC}
+    \]
+        </div>
+
+        <div class="formula">
+              \[
+        \frac{AD}{AB} = \frac{AE}{AC}
+    \]
+        </div>
+
+    </div>
+
+
+    <div class="ejemplo">
+
+        <h3>Ejemplo guiado</h3>
+        <div class="diagrama-thales diagrama-ejemplo">
+
+    <svg viewBox="0 0 500 300"
+         role="img"
+         aria-label="Triángulo ABC con segmento DE paralelo a BC">
+
+        <polygon
+            points="250,30 80,260 420,260"
+            fill="none"
+            stroke="#244b5a"
+            stroke-width="3">
+        </polygon>
+
+        <line
+            x1="190"
+            y1="110"
+            x2="310"
+            y2="110"
+            stroke="#d6a928"
+            stroke-width="4">
+        </line>
+
+        <circle cx="250" cy="30" r="5" fill="#244b5a"></circle>
+        <circle cx="80" cy="260" r="5" fill="#244b5a"></circle>
+        <circle cx="420" cy="260" r="5" fill="#244b5a"></circle>
+        <circle cx="190" cy="110" r="5" fill="#d6a928"></circle>
+        <circle cx="310" cy="110" r="5" fill="#d6a928"></circle>
+
+        <text x="250" y="20" text-anchor="middle">A</text>
+        <text x="65" y="280">B</text>
+        <text x="425" y="280">C</text>
+        <text x="175" y="105">D</text>
+        <text x="320" y="105">E</text>
+
+    </svg>
+
+    <p class="leyenda-diagrama">
+        DE ∥ BC
+    </p>
+
+</div>
+
+        <p>
+            Consideremos los datos:
+        </p>
+
+        <div class="datos-reto">
+
+            <div class="dato">
+                <span>AB</span>
+                <strong>12 cm</strong>
+            </div>
+
+            <div class="dato">
+                <span>AC</span>
+                <strong>15 cm</strong>
+            </div>
+
+            <div class="dato">
+                <span>AD</span>
+                <strong>8 cm</strong>
+            </div>
+
+        </div>
+
+        <p>
+            Queremos determinar la longitud de <strong>AE</strong>.
+        </p>
+
+        <div class="procedimiento">
+
+            <p>
+                Elegimos la proporción:
+            </p>
+
+            <div class="formula">
+                  \[
+        \frac{8}{12} = \frac{AE}{15}
+    \]
+            </div>
+
+            <p>
+                Multiplicamos en cruz:
+            </p>
+
+            <div class="formula">
+                 \[
+        12AE = 120
+    \]
+            </div>
+
+            <p>
+                Despejamos:
+            </p>
+
+            <div class="formula resultado">
+               <div class="formula resultado">
+    \[
+        AE = 10\,\text{cm}
+    \]
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="verificacion">
+
+        <h3>Comprobamos el resultado</h3>
+
+        <p>
+            Sustituimos el valor encontrado en la proporción:
+        </p>
+
+        <div class="formula">
+         <div class="formula">
+    \[
+        \frac{10}{15} = \frac{2}{3}
+    \]
+</div>
+        </div>
+
+        <p>
+            El resultado es consistente con la relación de
+            proporcionalidad establecida.
+        </p>
+
+    </div>
+
+
+    <div class="habito">
+
+        <span class="habito-numero">Hábito 2</span>
+
+        <div>
+
+            <strong>Comenzar con un fin en la mente</strong>
+
+            <p>
+                Antes de operar, identificamos qué longitud buscamos,
+                qué datos conocemos y qué proporción nos permite
+                relacionarlos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="momento3" class="momento">
+
+    <div class="encabezado-momento">
+
+        <div>
+            <p class="tipo-momento">MOMENTO 3 · TRABAJO INDIVIDUAL</p>
+
+            <h2>
+                Aplico el Teorema de Thales
+            </h2>
+
+            <p class="duracion">
+                15 minutos
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="actividad">
+
+        <h3>Instrucciones</h3>
+
+        <p>
+            Resuelve individualmente los siguientes ejercicios.
+            En cada caso:
+        </p>
+
+        <ol>
+            <li>Identifica los segmentos correspondientes.</li>
+            <li>Plantea una proporción correcta.</li>
+            <li>Resuelve la incógnita.</li>
+            <li>Comprueba que tu resultado sea coherente.</li>
+        </ol>
+
+    </div>
+
+
+    <!-- EJERCICIO 1 -->
+
+    
+    <div class="ejercicio ejercicio-1">
+
+        <div class="numero-ejercicio">
+            Ejercicio 1
+        </div>
+
+        <h3>Encuentra AE</h3>
+
+        <div class="datos-ejercicio">
+
+            <span>AB = 15 cm</span>
+            <span>AC = 20 cm</span>
+            <span>AD = 9 cm</span>
+
+        </div>
+
+        <p>
+            Determina la longitud de <strong>AE</strong>.
+        </p>
+
+        <button class="boton-pista"
+                type="button"
+                data-pista="pista-ejercicio-1">
+            💡 Mostrar pista
+        </button>
+
+        <p id="pista-ejercicio-1" class="pista oculto">
+            Utiliza la relación entre los segmentos correspondientes:
+            \[
+    \frac{AD}{AB} = \frac{AE}{AC}
+\]
+        </p>
+
+    </div>
+
+
+    <!-- EJERCICIO 2 -->
+
+    <div class="ejercicio-2">
+
+        <div class="numero-ejercicio">
+            Ejercicio 2
+        </div>
+
+        <h3>Encuentra EC</h3>
+
+        <div class="datos-ejercicio">
+
+            <span>AD = 6 cm</span>
+            <span>DB = 4 cm</span>
+            <span>AE = 9 cm</span>
+
+        </div>
+
+        <p>
+            Determina la longitud de <strong>EC</strong>.
+        </p>
+
+        <button class="boton-pista"
+                type="button"
+                data-pista="pista-ejercicio-2">
+            💡 Mostrar pista
+        </button>
+
+        <p id="pista-ejercicio-2" class="pista oculto">
+            Utiliza la relación:
+            \[
+    \frac{AD}{DB} = \frac{AE}{EC}
+\]
+        </p>
+
+    </div>
+
+
+    <!-- EJERCICIO 3 -->
+
+    <div class="ejercicio-3">
+
+        <div class="numero-ejercicio">
+            Ejercicio 3
+        </div>
+
+        <h3>Encuentra x</h3>
+
+        <div class="datos-ejercicio">
+
+            <span>AD = x</span>
+            <span>DB = 6 cm</span>
+            <span>AE = 8 cm</span>
+            <span>EC = 12 cm</span>
+
+        </div>
+
+        <p>
+            Determina el valor de <strong>x</strong>.
+        </p>
+
+        <button class="boton-pista"
+                type="button"
+                data-pista="pista-ejercicio-3">
+            💡 Mostrar pista
+        </button>
+
+        <p id="pista-ejercicio-3" class="pista oculto">
+    Pista: utiliza la proporción
+    \[
+        \frac{AD}{DB} = \frac{AE}{EC}
+    \]
+</p>
+
+    </div>
+
+
+    <div class="observacion-docente">
+
+        <h3>👀 Observación docente</h3>
+
+        <p>
+            Durante el trabajo individual se observa si el estudiante
+            identifica el paralelismo, reconoce los segmentos
+            correspondientes, mantiene el mismo orden en la proporción,
+            resuelve correctamente la incógnita y verifica su resultado.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="momento4" class="momento">
+
+    <div class="encabezado-momento">
+
+        <div>
+            <p class="tipo-momento">MOMENTO 4 · TRABAJO GRUPAL</p>
+
+            <h2>
+                Desafío: razonamos, comprobamos y creamos
+            </h2>
+
+            <p class="duracion">
+                25 minutos
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="actividad">
+
+        <h3>Trabajo en equipo</h3>
+
+        <p>
+            Formen equipos y resuelvan los siguientes desafíos.
+            No se limiten a encontrar la respuesta: deben explicar
+            cómo saben que su procedimiento es válido.
+        </p>
+
+        <p>
+            Cada equipo deberá presentar sus procedimientos,
+            proporciones y resultados.
+        </p>
+
+    </div>
+
+
+    <!-- DESAFÍO 1 -->
+
+    <div class="desafio desafio-1">
+
+        <div class="numero-desafio">
+            Desafío 1 · Descubrir
+        </div>
+
+        <h3>Encuentra AE y justifica</h3>
+
+        <div class="datos-ejercicio">
+
+            <span>AB = 18 cm</span>
+            <span>AC = 24 cm</span>
+            <span>AD = 12 cm</span>
+
+        </div>
+
+        <p>
+            Determinen la longitud de <strong>AE</strong>.
+        </p>
+
+        <p>
+            Además, expliquen:
+        </p>
+
+        <ul>
+            <li>¿Qué segmentos son correspondientes?</li>
+            <li>¿Qué proporción utilizaron?</li>
+            <li>¿Por qué la proporción es válida?</li>
+        </ul>
+
+    </div>
+
+
+    <!-- DESAFÍO 2 -->
+
+    <div class="desafio desafio-2">
+
+        <div class="numero-desafio">
+            Desafío 2 · Cambiar la incógnita
+        </div>
+
+        <h3>Encuentra EC</h3>
+
+        <div class="datos-ejercicio">
+
+            <span>AD = 8 cm</span>
+            <span>DB = 4 cm</span>
+            <span>AE = 10 cm</span>
+
+        </div>
+
+        <p>
+            Determinen la longitud de <strong>EC</strong>.
+        </p>
+
+        <p>
+            Escriban la proporción y expliquen el procedimiento
+            utilizado para encontrar la incógnita.
+        </p>
+
+    </div>
+
+
+    <!-- DESAFÍO 3 -->
+
+    <div class="desafio desafio-3 error-matematico">
+
+        <div class="numero-desafio">
+            Desafío 3 · Detectar el error
+        </div>
+
+        <h3>¿Es correcta esta proporción?</h3>
+
+        <p>
+            Un estudiante propone:
+        </p>
+
+        <div class="formula">
+            <div class="formula">
+    \[
+        \frac{AD}{AB} = \frac{AC}{AE}
+    \]
+</div>
+        </div>
+
+        <p>
+            Analicen el procedimiento.
+        </p>
+
+        <ol>
+            <li>Identifiquen el error.</li>
+            <li>Escriban la proporción correcta.</li>
+            <li>Expliquen por qué la proporción original no conserva la correspondencia.</li>
+        </ol>
+
+    </div>
+
+
+    <!-- DESAFÍO 4 -->
+
+    <div class="desafio desafio-4 crear-problema">
+
+        <div class="numero-desafio">
+            Desafío 4 · Crear
+        </div>
+
+        <h3>Construyan su propio problema</h3>
+
+        <p>
+            Cada equipo debe crear un problema utilizando el
+            Teorema de Thales en un triángulo.
+        </p>
+
+        <ol>
+            <li>Dibujen un triángulo.</li>
+            <li>Tracen un segmento paralelo a uno de sus lados.</li>
+            <li>Incluyan cuatro datos numéricos.</li>
+            <li>Establezcan una longitud desconocida.</li>
+            <li>Planteen una proporción.</li>
+            <li>Resuelvan la incógnita.</li>
+            <li>Comprueben el resultado.</li>
+        </ol>
+
+        <p>
+            Finalmente, intercambien el problema con otro equipo
+            para que lo resuelva.
+        </p>
+
+    </div>
+
+
+    <div class="producto-equipo">
+
+        <h3>📌 Producto del equipo</h3>
+
+        <p>
+            El trabajo debe incluir:
+        </p>
+
+        <ul>
+            <li>Figura geométrica.</li>
+            <li>Proporción planteada.</li>
+            <li>Procedimiento algebraico.</li>
+            <li>Respuesta.</li>
+            <li>Comprobación.</li>
+            <li>Explicación oral del razonamiento.</li>
+        </ul>
+
+    </div>
+
+
+    <div class="habito">
+
+        <span class="habito-numero">Hábito 2</span>
+
+        <div>
+
+            <strong>Comenzar con un fin en la mente</strong>
+
+            <p>
+                El equipo define qué necesita encontrar antes
+                de comenzar a operar y organiza su procedimiento
+                para alcanzar ese resultado.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="momento5" class="momento">
+
+    <div class="encabezado-momento">
+
+        <div>
+            <p class="tipo-momento">MOMENTO 5 · CIERRE</p>
+
+            <h2>
+                Reflexionamos y comprobamos lo aprendido
+            </h2>
+
+            <p class="duracion">
+                5 minutos
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="actividad">
+
+        <h3>Ideas clave</h3>
+
+        <p>
+            Para aplicar correctamente el Teorema de Thales
+            debemos reconocer tres elementos fundamentales:
+        </p>
+
+        <div class="ideas-clave">
+
+            <div class="idea">
+                <strong>1.</strong>
+                <span>El paralelismo: DE ∥ BC.</span>
+            </div>
+
+            <div class="idea">
+                <strong>2.</strong>
+                <span>La correspondencia entre los segmentos.</span>
+            </div>
+
+            <div class="idea">
+                <strong>3.</strong>
+                <span>La proporcionalidad entre segmentos correspondientes.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="ticket-salida">
+
+        <h3>🎫 Ticket de salida</h3>
+
+        <p>
+            Responde individualmente antes de finalizar la clase.
+        </p>
+
+
+        <div class="pregunta-salida">
+
+            <strong>1.</strong>
+
+            <p>
+                Si DE ∥ BC, AD = 6 cm, AB = 9 cm y AC = 15 cm,
+                determina la longitud de AE.
+            </p>
+
+        </div>
+
+
+        <div class="pregunta-salida">
+
+            <strong>2.</strong>
+
+            <p>
+                Completa la frase:
+            </p>
+
+            <p class="frase-completar">
+                Para aplicar el Teorema de Thales en un triángulo
+                es fundamental identificar
+                <span class="espacio-respuesta">________________________</span>.
+            </p>
+
+        </div>
+
+
+        <div class="pregunta-salida">
+
+            <strong>3.</strong>
+
+            <p>
+                Explica por qué es importante mantener el mismo orden
+                al establecer una proporción entre segmentos.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="proyeccion">
+
+        <h3>➡️ Conexión con el Plan 12</h3>
+
+        <p>
+            En la siguiente clase utilizaremos las relaciones de
+            proporcionalidad para resolver problemas de
+            <strong>medición indirecta</strong>.
+        </p>
+
+    </div>
+
+
+    <div class="evaluacion">
+
+        <h3>✓ Evidencia de aprendizaje</h3>
+
+        <p>
+            El estudiante aplica el Teorema de Thales utilizando
+            segmentos correspondientes, determina longitudes
+            desconocidas y argumenta la validez de sus resultados.
+        </p>
+
+    </div>
+
+</section>
+
+
+    </main>
+   
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            Colegio Montano · Área de Matemática
+        </p>
+
+    </footer>
+
+
+    <script src="../js/pdc.js"></script>
+
+</body>
+</html>

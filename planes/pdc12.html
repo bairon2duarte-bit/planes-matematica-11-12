@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan de Clase 12 — Teorema de Euclides en el triángulo rectángulo</title>
+
+    <link rel="stylesheet" href="../css/pdc.css">
+    <link rel="stylesheet" href="../css/impresion.css" media="print">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<header class="encabezado-plan">
+    <div class="encabezado-contenido">
+
+        <div class="icono-matematico">
+            <img src="../imagenes/logo_colegio.png" alt="Logo del Colegio Montano">
+        </div>
+
+        <div class="informacion-principal">
+            <p class="institucion">Colegio Montano</p>
+
+            <div class="tema-linea">
+                <span class="etiqueta-tema">TEMA:</span>
+                <span class="titulo-tema">Teorema de Euclides en el triángulo rectángulo</span>
+            </div>
+
+            <p class="datos-plan">
+                Tercero Básico · Matemática · Unidad IV – Geometría
+            </p>
+
+            <p class="datos-plan">
+                Sesión 12 · Semana del 28 de septiembre al 2 de octubre
+            </p>
+        </div>
+
+        <div class="informacion-docente">
+            <p class="codigo-pdc">PDC-12</p>
+            <p><strong>Duración</strong><br>70 minutos</p>
+            <p><strong>Docente</strong><br>PEM Bairon Efraín Duarte González</p>
+        </div>
+
+    </div>
+</header>
+
+<section class="proposito">
+    <div class="contenedor">
+        <p class="etiqueta">PROPÓSITO DE APRENDIZAJE</p>
+        <p>
+            Aplicar el Teorema de Euclides en triángulos rectángulos para relacionar
+            los catetos, la hipotenusa, sus proyecciones y la altura relativa a la
+            hipotenusa, determinando longitudes desconocidas mediante representaciones
+            geométricas, proporcionalidad y procedimientos algebraicos.
+        </p>
+    </div>
+</section>
+
+<main>
+
+<nav class="navegacion-momentos" aria-label="Momentos de la clase">
+    <button class="tab-activo" data-momento="momento1">1. Motivación</button>
+    <button data-momento="momento2">2. Exposición</button>
+    <button data-momento="momento3">3. Individual</button>
+    <button data-momento="momento4">4. Grupal</button>
+    <button data-momento="momento5">5. Cierre</button>
+</nav>
+<!--
+<div class="navegacion-impresion" aria-hidden="true">
+    <span>1. Motivación</span>
+    <span>2. Exposición</span>
+    <span>3. Individual</span>
+    <span>4. Grupal</span>
+    <span>5. Cierre</span>
+</div>
+-->
+<section id="momento1" class="momento">
+
+    <div class="encabezado-momento">
+        <div>
+            <p class="tipo-momento">MOMENTO 1 · MOTIVACIÓN INICIAL</p>
+            <h2>El triángulo escondido</h2>
+            <p class="duracion">10 minutos</p>
+        </div>
+    </div>
+
+    <div class="actividad">
+        <h3>Situación inicial</h3>
+        <p>
+            Observa un triángulo rectángulo \(ABC\). Desde el vértice del ángulo
+            recto se traza una altura \(CD\) perpendicular a la hipotenusa \(AB\).
+        </p>
+        <p>
+            Esta construcción divide el triángulo original en dos triángulos
+            rectángulos más pequeños y permite observar relaciones de semejanza
+            y proporcionalidad.
+        </p>
+    </div>
+
+    <div class="diagrama-thales">
+        <svg viewBox="0 0 520 320" role="img"
+             aria-label="Triángulo rectángulo ABC con altura CD a la hipotenusa">
+            <polygon points="110,260 420,260 300,55"
+                     fill="none" stroke="#244b5a" stroke-width="3"/>
+            <line x1="300" y1="55" x2="300" y2="260"
+                  stroke="#d6a928" stroke-width="4"/>
+            <circle cx="110" cy="260" r="5" fill="#244b5a"/>
+            <circle cx="420" cy="260" r="5" fill="#244b5a"/>
+            <circle cx="300" cy="55" r="5" fill="#244b5a"/>
+            <circle cx="300" cy="260" r="5" fill="#d6a928"/>
+            <text x="92" y="282">A</text>
+            <text x="425" y="282">B</text>
+            <text x="300" y="42" text-anchor="middle">C</text>
+            <text x="306" y="282">D</text>
+            <text x="315" y="160">h</text>
+            <text x="205" y="285">m</text>
+            <text x="360" y="285">n</text>
+        </svg>
+        <p class="leyenda-diagrama">\(CD \perp AB\), \(AB=c\), \(AD=m\), \(DB=n\)</p>
+    </div>
+
+    <div class="preguntas">
+        <h3>Preguntas orientadoras</h3>
+        <ol>
+            <li>¿Qué tienen en común los tres triángulos que aparecen?</li>
+            <li>¿Qué ángulos parecen conservarse?</li>
+            <li>¿Podrían ser semejantes?</li>
+            <li>Si son semejantes, ¿qué relaciones entre sus lados podríamos obtener?</li>
+            <li>¿Podríamos calcular un cateto sin utilizar directamente Pitágoras?</li>
+        </ol>
+    </div>
+
+    <div class="reto">
+        <h3>🚀 Reto inicial</h3>
+        <p>
+            En el triángulo anterior, \(AC\) es un cateto, \(AB\) es la hipotenusa
+            y \(AD\) es la proyección de \(AC\) sobre la hipotenusa.
+        </p>
+        <p>
+            <strong>¿Existe una manera de relacionar \(AC\), \(AB\) y \(AD\)
+            para encontrar una longitud desconocida?</strong>
+        </p>
+        <p>
+            Realiza una predicción antes de conocer formalmente el teorema.
+        </p>
+    </div>
+
+    <div class="habito">
+        <span class="habito-numero">Hábito 2</span>
+        <div>
+            <strong>Comenzar con un fin en la mente</strong>
+            <p>
+                Antes de realizar operaciones, identifica qué longitud necesitas
+                encontrar, qué elementos conoces y qué relación geométrica puede
+                conducir a la solución.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="momento2" class="momento">
+
+    <div class="encabezado-momento">
+        <div>
+            <p class="tipo-momento">MOMENTO 2 · EXPOSICIÓN MAGISTRAL</p>
+            <h2>Descubrimos el Teorema de Euclides</h2>
+            <p class="duracion">15 minutos</p>
+        </div>
+    </div>
+
+    <div class="actividad">
+        <h3>Identificamos los elementos</h3>
+        <p>
+            En el triángulo rectángulo \(ABC\):
+        </p>
+        <ul>
+            <li>\(a\) y \(b\): catetos.</li>
+            <li>\(c\): hipotenusa.</li>
+            <li>\(h\): altura relativa a la hipotenusa.</li>
+            <li>\(m\): proyección del cateto \(b\) sobre la hipotenusa.</li>
+            <li>\(n\): proyección del cateto \(a\) sobre la hipotenusa.</li>
+        </ul>
+    </div>
+
+    <div class="concepto">
+        <h3>Construcción conceptual mediante semejanza</h3>
+        <p>
+            La altura relativa a la hipotenusa genera dos triángulos rectángulos
+            semejantes al triángulo original. A partir de la correspondencia entre
+            sus lados se obtiene una relación métrica.
+        </p>
+
+        <div class="formula">
+            \[
+                a^2 = c\,n
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+                b^2 = c\,m
+            \]
+        </div>
+
+        <p>
+            Es decir, el cuadrado de cada cateto es igual al producto de la
+            hipotenusa por la proyección correspondiente de ese cateto.
+        </p>
+
+        <div class="formula">
+            \[
+                h^2 = m\,n
+            \]
+        </div>
+
+        <p>
+            Esta última relación se presenta como una extensión de las relaciones
+            métricas que aparecen al dividir la hipotenusa mediante la altura.
+        </p>
+    </div>
+
+    <div class="ejemplo">
+        <h3>Ejemplo guiado</h3>
+
+        <p>
+            Supongamos que la hipotenusa mide \(25\) cm y la proyección de un cateto
+            sobre ella mide \(9\) cm. Determinemos el cateto correspondiente.
+        </p>
+
+        <div class="procedimiento">
+            <p><strong>1. Identificamos los datos:</strong></p>
+            <div class="formula">
+                \[
+                    c=25\text{ cm},\qquad n=9\text{ cm}
+                \]
+            </div>
+
+            <p><strong>2. Aplicamos el Teorema de Euclides:</strong></p>
+            <div class="formula">
+                \[
+                    a^2=c\,n
+                \]
+            </div>
+
+            <p><strong>3. Sustituimos:</strong></p>
+            <div class="formula">
+                \[
+                    a^2=25(9)=225
+                \]
+            </div>
+
+            <p><strong>4. Tomamos la raíz positiva porque buscamos una longitud:</strong></p>
+            <div class="formula resultado">
+                \[
+                    a=\sqrt{225}=15\text{ cm}
+                \]
+            </div>
+        </div>
+    </div>
+
+    <div class="verificacion">
+        <h3>Comprobamos el razonamiento</h3>
+        <p>
+            El resultado tiene sentido porque \(15^2=225\) y
+            \(25\cdot9=225\). Por tanto, se conserva la relación métrica.
+        </p>
+        <p>
+            Cuando los datos disponibles lo permitan, también podemos comprobar
+            los resultados utilizando el Teorema de Pitágoras.
+        </p>
+    </div>
+
+    <div class="habito">
+        <span class="habito-numero">Hábito 2</span>
+        <div>
+            <strong>Comenzar con un fin en la mente</strong>
+            <p>
+                Identificamos primero qué longitud buscamos, qué elementos conocemos
+                y cuál de las relaciones métricas conecta esos datos.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="momento3" class="momento">
+
+    <div class="encabezado-momento">
+        <div>
+            <p class="tipo-momento">MOMENTO 3 · TRABAJO INDIVIDUAL</p>
+            <h2>Aplico el Teorema de Euclides</h2>
+            <p class="duracion">15 minutos</p>
+        </div>
+    </div>
+
+    <div class="actividad">
+        <h3>Instrucciones</h3>
+        <p>Resuelve individualmente. En cada ejercicio:</p>
+        <ol>
+            <li>Identifica la hipotenusa.</li>
+            <li>Identifica el cateto y su proyección correspondiente.</li>
+            <li>Selecciona la relación de Euclides adecuada.</li>
+            <li>Plantea la ecuación.</li>
+            <li>Despeja la incógnita y comprueba el resultado.</li>
+        </ol>
+    </div>
+
+    <div class="ejercicio ejercicio-1">
+        <div class="numero-ejercicio">Ejercicio 1</div>
+        <h3>Determina un cateto</h3>
+        <div class="datos-ejercicio">
+            <span>c = 25 cm</span>
+            <span>n = 9 cm</span>
+        </div>
+        <p>
+            Determina la longitud del cateto \(a\).
+        </p>
+        <button class="boton-pista" type="button" data-pista="pista-e1">
+            💡 Mostrar pista
+        </button>
+        <p id="pista-e1" class="pista oculto">
+            Utiliza \(a^2=c\,n\). Sustituye los datos y toma la raíz cuadrada positiva.
+        </p>
+    </div>
+
+    <div class="ejercicio ejercicio-2">
+        <div class="numero-ejercicio">Ejercicio 2</div>
+        <h3>Determina el segundo cateto</h3>
+        <div class="datos-ejercicio">
+            <span>c = 25 cm</span>
+            <span>m = 16 cm</span>
+        </div>
+        <p>
+            Determina la longitud del cateto \(b\).
+        </p>
+        <button class="boton-pista" type="button" data-pista="pista-e2">
+            💡 Mostrar pista
+        </button>
+        <p id="pista-e2" class="pista oculto">
+            Utiliza \(b^2=c\,m\). Recuerda que la proyección debe corresponder al cateto buscado.
+        </p>
+    </div>
+
+    <div class="ejercicio ejercicio-3">
+        <div class="numero-ejercicio">Ejercicio 3</div>
+        <h3>Encuentra la hipotenusa</h3>
+        <div class="datos-ejercicio">
+            <span>a = 12 cm</span>
+            <span>n = 9 cm</span>
+        </div>
+        <p>
+            Determina la longitud de la hipotenusa \(c\).
+        </p>
+        <button class="boton-pista" type="button" data-pista="pista-e3">
+            💡 Mostrar pista
+        </button>
+        <p id="pista-e3" class="pista oculto">
+            Parte de \(a^2=c\,n\) y despeja \(c\).
+        </p>
+    </div>
+
+    <div class="ejercicio">
+        <div class="numero-ejercicio">Ejercicio 4 · Reto</div>
+        <h3>Relaciona altura y proyecciones</h3>
+        <div class="datos-ejercicio">
+            <span>m = 9 cm</span>
+            <span>n = 16 cm</span>
+        </div>
+        <!--p>
+            Utiliza la relación \(h^2=m\,n\) para determinar la altura relativa
+            a la hipotenusa.
+        </p-->
+        <button class="boton-pista" type="button" data-pista="pista-e4">
+            💡 Mostrar pista
+        </button>
+        <p id="pista-e4" class="pista oculto">
+            Multiplica las dos proyecciones y toma la raíz cuadrada positiva:
+            \(h=\sqrt{m\,n}\).
+        </p>
+    </div>
+
+    <div class="observacion-docente">
+        <h3>👀 Acompañamiento docente</h3>
+        <p>
+            Observar especialmente si el estudiante distingue cateto y proyección,
+            identifica correctamente la hipotenusa, selecciona la relación adecuada,
+            desarrolla el procedimiento algebraico y comprueba su respuesta.
+        </p>
+    </div>
+
+</section>
+
+<section id="momento4" class="momento">
+
+    <div class="encabezado-momento">
+        <div>
+            <p class="tipo-momento">MOMENTO 4 · TRABAJO GRUPAL</p>
+            <h2>Ingenieros del triángulo</h2>
+            <p class="duracion">25 minutos</p>
+        </div>
+    </div>
+
+    <div class="actividad">
+        <h3>Reto colaborativo</h3>
+        <p>
+            Formen equipos de 3 o 4 integrantes. Imaginen que son un equipo de
+            arquitectos que necesita determinar la longitud de un soporte diagonal
+            de una estructura triangular.
+        </p>
+        <p>
+            Cada equipo recibe una figura de un triángulo rectángulo con diferentes
+            datos y debe construir, identificar, resolver y justificar su procedimiento.
+        </p>
+    </div>
+
+    <div class="desafio desafio-1">
+        <h3>Desafío 1 · Identificar</h3>
+        <p>Antes de calcular, señalen en la figura:</p>
+        <ul>
+            <li>La hipotenusa.</li>
+            <li>El cateto que se desea encontrar.</li>
+            <li>La proyección correspondiente.</li>
+            <li>El ángulo recto.</li>
+            <li>La altura relativa a la hipotenusa.</li>
+        </ul>
+    </div>
+
+    <div class="desafio desafio-2">
+        <h3>Desafío 2 · Representar y seleccionar</h3>
+        <p>
+            Dibujen correctamente el triángulo y etiqueten sus elementos.
+            Después determinen cuál relación corresponde al problema:
+        </p>
+        <div class="formula">
+            \[
+                a^2=c\,n
+            \]
+        </div>
+        <div class="formula">
+            \[
+                b^2=c\,m
+            \]
+        </div>
+        <p>
+            Expliquen por qué la proyección elegida corresponde al cateto que buscan.
+        </p>
+    </div>
+
+    <div class="desafio desafio-3">
+        <h3>Desafío 3 · Resolver y comprobar</h3>
+        <p>
+            Resuelvan la longitud desconocida y, cuando los datos lo permitan,
+            comprueben el resultado mediante el Teorema de Pitágoras.
+        </p>
+        <ol>
+            <li>Planteen la relación.</li>
+            <li>Sustituyan los datos.</li>
+            <li>Realicen el procedimiento algebraico.</li>
+            <li>Obtengan la longitud.</li>
+            <li>Comprueben el resultado.</li>
+        </ol>
+    </div>
+
+    <div class="desafio desafio-4">
+        <h3>Desafío 4 · Argumentar</h3>
+        <p>Completen las siguientes afirmaciones:</p>
+        <ul>
+            <li>
+                <strong>Utilizamos el Teorema de Euclides porque...</strong>
+                ________________________________.
+            </li>
+            <li>
+                <strong>La proyección que corresponde al cateto que buscamos es...</strong>
+                __________________ porque __________________.
+            </li>
+        </ul>
+    </div>
+
+    <div class="reto">
+        <h3>⭐ Desafío adicional</h3>
+        <p>
+            Si un triángulo rectángulo tiene hipotenusa de \(25\) cm y las
+            proyecciones de sus catetos son \(9\) cm y \(16\) cm, determinen ambos
+            catetos y verifiquen que los resultados cumplen el Teorema de Pitágoras.
+        </p>
+    </div>
+
+    <div class="producto-equipo">
+        <h3>📌 Producto del equipo</h3>
+        <p>El trabajo debe incluir:</p>
+        <ul>
+            <li>Figura correctamente etiquetada.</li>
+            <li>Identificación de hipotenusa, cateto y proyección.</li>
+            <li>Relación de Euclides seleccionada.</li>
+            <li>Procedimiento algebraico.</li>
+            <li>Respuesta.</li>
+            <li>Comprobación.</li>
+            <li>Explicación del razonamiento.</li>
+        </ul>
+    </div>
+
+    <div class="habito">
+        <span class="habito-numero">Hábito 2</span>
+        <div>
+            <strong>Comenzar con un fin en la mente</strong>
+            <p>
+                El equipo define qué longitud necesita encontrar y organiza los
+                pasos necesarios para alcanzar y comprobar ese resultado.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="momento5" class="momento">
+
+    <div class="encabezado-momento">
+        <div>
+            <p class="tipo-momento">MOMENTO 5 · CIERRE</p>
+            <h2>Comprobamos y conectamos lo aprendido</h2>
+            <p class="duracion">5 minutos</p>
+        </div>
+    </div>
+
+    <div class="actividad">
+        <h3>Puesta en común</h3>
+        <p>
+            Se comparan dos procedimientos del trabajo grupal considerando:
+        </p>
+        <ol>
+            <li>Identificación de datos.</li>
+            <li>Elección de la proyección.</li>
+            <li>Planteamiento.</li>
+            <li>Procedimiento algebraico.</li>
+            <li>Comprobación.</li>
+        </ol>
+    </div>
+
+    <div class="concepto">
+        <h3>Ideas clave</h3>
+        <p>
+            Para aplicar correctamente el Teorema de Euclides debemos reconocer
+            la relación entre:
+        </p>
+        <div class="ideas-clave">
+            <div class="idea">
+                <strong>1.</strong>
+                <span>El cateto que buscamos.</span>
+            </div>
+            <div class="idea">
+                <strong>2.</strong>
+                <span>La hipotenusa.</span>
+            </div>
+            <div class="idea">
+                <strong>3.</strong>
+                <span>La proyección correspondiente sobre la hipotenusa.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-salida">
+        <h3>🎫 Ticket de salida</h3>
+        <p>Responde individualmente antes de finalizar la clase.</p>
+
+        <div class="pregunta-salida">
+            <strong>1.</strong>
+            <p>
+                ¿Qué tres elementos relaciona el Teorema de Euclides para calcular
+                un cateto?
+            </p>
+        </div>
+
+        <div class="pregunta-salida">
+            <strong>2.</strong>
+            <p>
+                Si \(c=25\) cm y \(n=9\) cm, ¿cuánto mide el cateto correspondiente?
+            </p>
+        </div>
+
+        <div class="pregunta-salida">
+            <strong>3.</strong>
+            <p>
+                Explica con una frase por qué es importante identificar correctamente
+                la proyección antes de aplicar la relación de Euclides.
+            </p>
+        </div>
+    </div>
+
+    <div class="proyeccion">
+        <h3>➡️ Conexión con la secuencia de la Unidad</h3>
+        <p>
+            En el Plan 10 descubrimos la proporcionalidad; en el Plan 11 aplicamos
+            el Teorema de Thales en triángulos; ahora utilizamos esas relaciones para
+            comprender el Teorema de Euclides. La siguiente etapa integrará Euclides
+            y Pitágoras en situaciones de aplicación.
+        </p>
+    </div>
+
+    <div class="evaluacion">
+        <h3>✓ Evidencia de aprendizaje</h3>
+        <p>
+            El estudiante resuelve y justifica un problema de un triángulo rectángulo
+            utilizando el Teorema de Euclides, identificando correctamente la relación
+            entre cateto, hipotenusa y proyección.
+        </p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>Colegio Montano · Área de Matemática</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const botones = document.querySelectorAll(".navegacion-momentos button");
+    const momentos = document.querySelectorAll(".momento");
+
+    function mostrarMomento(id) {
+        momentos.forEach(momento => {
+            momento.classList.toggle(
+                "momento-visible",
+                momento.id === id
+            );
+        });
+
+        botones.forEach(boton => {
+            boton.classList.toggle(
+                "tab-activo",
+                boton.dataset.momento === id
+            );
+        });
+    }
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            mostrarMomento(boton.dataset.momento);
+        });
+    });
+
+    document.querySelectorAll(".boton-pista").forEach(boton => {
+        boton.addEventListener("click", () => {
+            const pista = document.getElementById(boton.dataset.pista);
+            if (!pista) return;
+
+            pista.classList.toggle("oculto");
+            boton.textContent = pista.classList.contains("oculto")
+                ? "💡 Mostrar pista"
+                : "🙈 Ocultar pista";
+        });
+    });
+
+    mostrarMomento("momento1");
+});
+</script>
+
+</body>
+</html>

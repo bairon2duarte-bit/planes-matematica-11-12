@@ -1,0 +1,595 @@
+/* =========================================================
+   COLEGIO MONTANO
+   PLAN DE CLASE — ESTILOS EXCLUSIVOS DE IMPRESIÓN
+
+   Papel: 21.5 × 32.9 cm
+   Orientación: vertical
+   ========================================================= */
+
+
+/* =========================================================
+   CONFIGURACIÓN DE PÁGINA
+   ========================================================= */
+
+@page {
+    size: 21.5cm 32.9cm;
+    margin: 2cm;
+}
+
+
+/* =========================================================
+   IMPRESIÓN
+   ========================================================= */
+
+@media print {
+
+    /* -----------------------------------------------------
+       ESCALA GENERAL DE LA PÁGINA
+       ----------------------------------------------------- */
+
+    body {
+        margin: 0 !important;
+
+        background: white !important;
+
+        zoom: 0.60;
+        width: 98% !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+
+    /* -----------------------------------------------------
+       ENCABEZADO
+       ----------------------------------------------------- */
+
+    .encabezado-plan {
+        width: auto !important;
+
+        margin-left: -2cm !important;
+        margin-right: -2cm !important;
+
+        padding: 0 2cm !important;
+
+        background: linear-gradient(
+            135deg,
+            #244b5a,
+            #1f3c88
+        ) !important;
+
+        color: white !important;
+
+        box-shadow: none !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENIDO DEL ENCABEZADO
+       ----------------------------------------------------- */
+
+    .encabezado-contenido {
+
+        width: 100% !important;
+
+        margin: 0 auto !important;
+
+        padding: 28px 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            90px
+            minmax(0, 1fr)
+            auto !important;
+
+        gap: 22px !important;
+
+        align-items: center !important;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+       ----------------------------------------------------- */
+
+    .icono-matematico {
+
+        width: 90px !important;
+        height: 90px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: transparent !important;
+
+        border-radius: 0 !important;
+
+        font-size: inherit !important;
+    }
+
+
+    .icono-matematico img {
+
+        width: 90px !important;
+        height: 90px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMACIÓN PRINCIPAL
+       ----------------------------------------------------- */
+
+    .informacion-principal {
+
+        min-width: 0 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* -----------------------------------------------------
+       COLEGIO MONTANO
+       ----------------------------------------------------- */
+
+    .institucion {
+
+        margin: 0 0 5px !important;
+
+        font-size: 1.8rem !important;
+
+        line-height: 1.1 !important;
+
+        text-transform: uppercase !important;
+
+        letter-spacing: 0.08em !important;
+
+        font-weight: bold !important;
+
+        color: #FFD700 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TEMA
+       ----------------------------------------------------- */
+
+    .tema-linea {
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        line-height: 1.15 !important;
+
+        text-align: left !important;
+    }
+
+
+    .etiqueta-tema {
+
+        display: inline !important;
+
+        margin: 0 8px 0 0 !important;
+
+        font-size: 2rem !important;
+
+        line-height: 1.15 !important;
+
+        font-weight: bold !important;
+
+        letter-spacing: 0.08em !important;
+
+        color: white !important;
+    }
+
+
+    .titulo-tema {
+
+        display: inline !important;
+
+        margin: 0 !important;
+
+        font-size: 1.5rem !important;
+
+        line-height: 1.15 !important;
+
+        font-weight: bold !important;
+
+        letter-spacing: 0.08em !important;
+
+        color: white !important;
+    }
+
+
+    /* -----------------------------------------------------
+       DATOS DEL PLAN
+       ----------------------------------------------------- */
+
+    .datos-plan {
+
+        margin: 3px 0 !important;
+
+        font-size: 0.95rem !important;
+
+        line-height: 1.3 !important;
+
+        color: white !important;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMACIÓN DEL DOCENTE
+       ----------------------------------------------------- */
+
+    .informacion-docente {
+
+        grid-column: auto !important;
+
+        text-align: right !important;
+
+        font-size: 0.9rem !important;
+
+        line-height: 1.2 !important;
+
+        padding: 0 !important;
+
+        border: none !important;
+    }
+
+
+    .informacion-docente p {
+
+        margin: 5px 0 !important;
+
+        padding: 0 !important;
+    }
+
+
+    .codigo-pdc {
+
+        margin: 0 0 5px !important;
+
+        font-size: 1.8rem !important;
+
+        line-height: 1.1 !important;
+
+        text-transform: uppercase !important;
+
+        letter-spacing: 0.08em !important;
+
+        font-weight: bold !important;
+
+        color: #FFD700 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PROPÓSITO
+       ----------------------------------------------------- */
+
+    .proposito {
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+
+        background: #fffdf5 !important;
+
+        border-bottom: 1px solid #f0d98c !important;
+    }
+
+
+    .proposito .contenedor {
+
+        width: 100% !important;
+
+        padding: 18px 0 !important;
+    }
+
+
+    .proposito .etiqueta {
+
+        margin-bottom: 5px !important;
+
+        color: #8a6500 !important;
+
+        font-size: 0.75rem !important;
+
+        font-weight: bold !important;
+
+        letter-spacing: 0.08em !important;
+    }
+
+
+    .proposito p {
+
+        margin: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVEGACIÓN DE MOMENTOS
+       ----------------------------------------------------- */
+
+    .navegacion-momentos {
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 10px 0 !important;
+
+        padding: 5px !important;
+
+        gap: 0 !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        white-space: nowrap !important;
+
+        background: white !important;
+
+        border-radius: 8px !important;
+
+        box-shadow: 0 2px 6px
+            rgba(0, 0, 0, 0.08) !important;
+    }
+
+
+    .navegacion-momentos button {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: none !important;
+
+        flex: none !important;
+
+        margin: 0 !important;
+
+        padding: 5px 2px !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        color: #244b5a !important;
+
+        font-family: Arial, sans-serif !important;
+
+        font-size: 0.55rem !important;
+
+        font-weight: bold !important;
+
+        line-height: 1.1 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .navegacion-momentos
+    .tab-activo {
+
+        background: #244b5a !important;
+
+        color: white !important;
+    }
+
+
+    /* Eliminar desplazamiento */
+
+    .navegacion-momentos::-webkit-scrollbar {
+
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MOMENTOS DE LA CLASE
+       ----------------------------------------------------- */
+
+    .momento {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 15px 0 !important;
+
+        padding: 22px !important;
+
+        background: white !important;
+
+        border-radius: 10px !important;
+
+        box-shadow: none !important;
+
+        break-inside: auto !important;
+
+        page-break-inside: auto !important;
+    }
+
+
+    /* -----------------------------------------------------
+       ENCABEZADO DE CADA MOMENTO
+       ----------------------------------------------------- */
+
+    .encabezado-momento {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        margin-bottom: 18px !important;
+    }
+
+
+    .tipo-momento {
+
+        margin: 0 0 5px !important;
+
+        color: #244b5a !important;
+
+        font-size: 0.7rem !important;
+
+        font-weight: bold !important;
+
+        letter-spacing: 0.08em !important;
+    }
+
+
+    .encabezado-momento h2 {
+
+        margin: 0 !important;
+
+        color: #243447 !important;
+
+        font-size: 1.35rem !important;
+    }
+
+
+    .duracion {
+
+        margin: 5px 0 0 !important;
+
+        color: #687887 !important;
+
+        font-size: 0.8rem !important;
+    }
+
+
+    /* -----------------------------------------------------
+       BLOQUES INTERNOS
+       ----------------------------------------------------- */
+
+    .actividad,
+    .reto,
+    .preguntas,
+    .concepto,
+    .ejemplo,
+    .procedimiento,
+    .verificacion,
+    .habito,
+    .ticket-salida,
+    .evaluacion,
+    .proyeccion,
+    .producto-equipo {
+
+        break-inside: avoid !important;
+
+        page-break-inside: avoid !important;
+    }
+
+
+    /* -----------------------------------------------------
+       EJERCICIOS
+       ----------------------------------------------------- */
+
+    .ejercicio,
+    .desafio {
+
+        break-inside: avoid !important;
+
+        page-break-inside: avoid !important;
+    }
+
+
+    /* -----------------------------------------------------
+       BOTONES INTERACTIVOS
+       ----------------------------------------------------- */
+
+    .boton-pista {
+
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       ELEMENTOS OCULTOS
+       ----------------------------------------------------- */
+
+    .oculto {
+
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PIE DE PÁGINA
+       ----------------------------------------------------- */
+
+    footer {
+
+        margin-top: 20px !important;
+
+        padding: 10px !important;
+
+        background: #244b5a !important;
+
+        color: white !important;
+
+        text-align: center !important;
+
+        font-size: 0.75rem !important;
+
+        -webkit-print-color-adjust: exact !important;
+
+        print-color-adjust: exact !important;
+    }
+
+
+    /* -----------------------------------------------------
+       EVITAR ELEMENTOS INTERACTIVOS INNECESARIOS
+       ----------------------------------------------------- */
+
+    button:hover {
+
+        background: inherit !important;
+    }
+
+
+    /* -----------------------------------------------------
+       COLORES PARA IMPRESIÓN
+       ----------------------------------------------------- */
+
+    .encabezado-plan,
+    .habito-numero,
+    .navegacion-momentos .tab-activo,
+    footer {
+
+        -webkit-print-color-adjust: exact !important;
+
+        print-color-adjust: exact !important;
+    }
+
+}
